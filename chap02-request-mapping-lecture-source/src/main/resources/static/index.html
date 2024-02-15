@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Spring Request Mapping 테스트</h1>
+<h2>1. 메소드에 요청 매핑하기</h2>
+<h3>GET: /menu/regist</h3>
+<button onclick="location.href='/menu/regist'">GET 메뉴 등록 요청</button>
+<!--    <a href="/menu/regist">a태그로 같은 요청 보내기</a>-->
+<h3>POST: /menu/modify</h3>
+<form action="/menu/modify" method="post">
+    <button type="submit">POST 메뉴 수정 요청</button>
+</form>
+
+<h3>GET: /menu/delete</h3>
+<button onclick="location.href='/menu/delete'">GET 메뉴 삭제 요청</button>
+
+<h3>POST: /menu/delete</h3>
+<form action="/menu/delete" method="post">
+    <button>POST 메뉴 삭제 요청</button>
+</form>
+
+</body>
+</html>
