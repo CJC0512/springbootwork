@@ -1,0 +1,9 @@
+# yml, yaml이 좋은 이유
+# 1. 한글 작성이 용이하다.
+# 2. 들여쓰기 및 동일한 코드가 줄어들어 가독성이 좋다.
+# 3. 주석은 # 하나만 다는 걸로 통일할 수 있다.
+
+test:
+  value: Hell World! Hello Friend!
+  age: 10
+  array: 안녕, 반가워
