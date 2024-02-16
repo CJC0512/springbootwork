@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+    <h1>뷰 리졸버를 이용한 뷰 연결하기(feat.포워딩vs리다이렉트)</h1>
+
+    <h3>문자열로 뷰 이름 반환하기</h3>
+    <button onclick="location.href='string'">문자열로 뷰 이름 반환</button>
+
+    <h3>문자열로 redirect</h3>
+    <button onclick="location.href='string-redirect'">문자열로 뷰 이름 반환하여 리다이렉트</button>
+    <script>
+        const message1 = `[[${message1}]]`;
+        // const message1 = `[[${param.message1}]]`;   /* parameter로 전달해주었기에 param을 통해 message1에 접근할 수 있다. */
+        console.log('test');
+        console.log(message1);
+    </script>
+
+    <h3>문자열로 뷰 이름 반환하면서 flashAttribute 추가하기</h3>
+    <button onclick="location.href='string-redirect-attr'">
+        문자열로 뷰 이름 반환하여 리다이렉트 & flash Attr 사용하기
+    </button>
+    <script>
+        const flashMessage1 = `[[${flashMessage1}]]`;
+        console.log(flashMessage1);
+    </script>
+
+    <h3>ModelAndView로 뷰 이름 지정해서 반환하기</h3>
+    <button onclick="location.href='modelandview'">
+        ModelAndView로 뷰 이름까지 지정해서 반환하기
+    </button>
+
+    <h3>ModelAndView로 redirect하기</h3>
+    <button onclick="location.href='modelandview-redirect'">
+        ModelAndView로 뷰 이름 반환하여 리다이렉트
+    </button>
+    <script>
+        const message2 = `[[${message2}]]`;
+        if(message2){
+            alert(message2);
+        }
+    </script>
+</div>
+</body>
+</html>
