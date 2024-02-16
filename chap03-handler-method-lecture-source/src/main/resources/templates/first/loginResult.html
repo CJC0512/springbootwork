@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+    <h1>session에 담긴 값(로그인 회원 id) 확인하기</h1>
+    <h3 th:text="|${session.id}님 환영합니다.|"></h3> <!-- 설명. thymeleaf scope를 적고 값을 꺼내야 된다.(param, request, session)-->
+    <div align="right">
+        <button onclick="location.href='logout1'">로그아웃1</button>
+    </div>
+</div>
+</body>
+</html>
