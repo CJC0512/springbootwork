@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+    <h1>Model에 담긴 커맨드 객체의 정보 출력</h1>
+
+    <!-- 설명. 1. @ModelAttribute에 키 값을 적었을 경우 -->
+    <h3 th:text = "|메뉴의 이름: ${menu.name}|"></h3>
+    <h3 th:text = "|메뉴의 가격: ${menu.price}|"></h3>
+    <h3 th:text = "|메뉴의 카테고리: ${menu.categoryCode}|"></h3>
+    <h3 th:text = "|메뉴의 판매상태: ${menu.orderableStatus}|"></h3>
+
+    <!-- 설명. 2. @ModelAttribute에 키 값이 없을 경우 커맨드 객체의 타입(낙타봉 표기법 적용) -->
+<!--    <h3 th:text = "|메뉴의 이름: ${menuDTO.name}|"></h3>-->
+<!--    <h3 th:text = "|메뉴의 가격: ${menuDTO.price}|"></h3>-->
+<!--    <h3 th:text = "|메뉴의 카테고리: ${menuDTO.categoryCode}|"></h3>-->
+<!--    <h3 th:text = "|메뉴의 판매상태: ${menuDTO.orderableStatus}|"></h3>-->
+
+</div>
+</body>
+</html>
