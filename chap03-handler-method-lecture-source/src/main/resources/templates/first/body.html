@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div align="center">
+
+    <h1 align="center">@RequestBody를 이용한 값 전달 받기</h1>
+    <form action="body" method="post">
+        메뉴 이름: <input type="text" name="name"><br>
+        메뉴 가격: <input type="text" name="price"><br>
+        카테고리:
+        <select name="categoryCode">
+            <option value="1">식사</option>
+            <option value="2">음료</option>
+            <option value="3">디저트</option>
+        </select><br>
+        판매 상태: <input type="text" name="orderableStatus"><br>
+        <input type="submit" value="전송하기">
+    </form>
+</div>
+</body>
+</html>
