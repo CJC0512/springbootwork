@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.context.request.WebRequest;
 
 import java.util.Map;
@@ -15,6 +16,9 @@ import java.util.Map;
  *       클래스에 어노테이션을 추가할 수 있다.
  * */
 @RequestMapping("/first")
+
+/* 설명. 이 Controller 클래스의 핸들러 메소드에서 Model에 'id'라는 키 값으로 담는 값들은 Session에 담으라는 어노테이션 */
+@SessionAttributes("id")
 public class FirstController {
 
     /* 설명. 반환형이 void인 핸들러 메소드는 요청 경로 자체가 view의 경로 및 이름을 반환한 것으로 바로 해석이 된다. */
@@ -102,12 +106,33 @@ public class FirstController {
     }
 
     @GetMapping("login")
-    public void login(){
+    public void login() {
     }
 
     @PostMapping("login")
-    public String sessionTest1(HttpSession session, @RequestParam String id){
-        session.setAttribute("id",id);
+    public String sessionTest1(HttpSession session, @RequestParam String id) {
+        session.setAttribute("id", id);
+        return "first/loginResult";
+    }
+
+    @GetMapping("logout1")
+    public String logoutTest1(HttpSession session) {
+        session.invalidate();
+        return "first/loginResult";
+    }
+
+    @PostMapping("login2")
+    public String sessionTest2(Model model, @RequestParam String id) {
+        model.addAttribute("id", id);
+
+        return "first/loginResult";
+    }
+
+    /* 설명. @sessionAttribute 방식으러 session에 담긴 값은 SessionStatus에서 제공하는 setComplete()로 만료 시켜야 햔댜. */
+    @GetMapping("logout2")
+    public String logoutTest2(SessionStatus sessionStatus){
+        sessionStatus.setComplete();
+
         return "first/loginResult";
     }
 }
