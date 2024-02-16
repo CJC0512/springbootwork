@@ -18,7 +18,7 @@ public class ResolverController {
         return "result";
     }
 
-    /* 설명. 서블릿 때와 마찬가지로 파라미터를 활용하지 않고서는 리다이렉트를 통해 값ㅇ르 전달할 수 없다. (스프링은 해법이 있다.) */
+    /* 설명. 서블릿 때와 마찬가지로 파라미터를 활용하지 않고서는 리다이렉트를 통해 값을 전달할 수 없다. (스프링은 해법이 있다.) */
     @GetMapping("string-redirect")
     public String stringRedirect(Model model){
         model.addAttribute("message1", "문자열로 뷰 이름 반환하며 리다이렉트");
