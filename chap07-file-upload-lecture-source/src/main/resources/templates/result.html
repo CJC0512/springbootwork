@@ -6,15 +6,20 @@
 </head>
 <body>
 
-    <h1 th:text="${message}"></h1>
-<!--    <img th:src="${img}">-->
-<!--    <p th:text="${singleFileDescription}"></p>-->
+<h1 th:text="${message}"></h1>
 
-    <!-- 설명. server에서 img 경로를 List<String> 형태로 보내준 것을 반복시켜 img 태그들을 반복해서 만들어 낸다. -->
+<div th:if="${img != null}">
+    <img th:src="${img}">
+    <p th:text="${singleFileDescription}"></p>
+</div>
+
+<!-- 설명. server에서 img 경로를 List<String> 형태로 보내준 것을 반복시켜 img 태그들을 반복해서 만들어 낸다. -->
+<div th:else>
     <div th:each="img : ${imgs}">
         <img th:src="${img}" width="300" height="300"/>
     </div>
     <p th:text="${multiFileDescription}"></p>
+</div>
 
 </body>
 </html>
