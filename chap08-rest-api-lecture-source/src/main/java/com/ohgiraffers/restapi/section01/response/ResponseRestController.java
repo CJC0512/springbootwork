@@ -84,5 +84,5 @@ public class ResponseRestController {
         return ResponseEntity.ok(new Message(200,"응답 성공"));
     }
 
-    
+
 }
